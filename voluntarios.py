@@ -110,8 +110,15 @@ print('LENDO AQUIVO JSON....\n')
 json = input('Digite o nome do arquivo JSON: ')
 # adicionando a resposta do usuario a lista resumo
 resumo.append(f'O usuario leu o arquivo {json}.json')
-# chamando a função leitura_json para ler o arquivo json e amarzenando-a numa variavel
-df = leitura_json(json)
+# Usamos a função try para tratarmos de possíveis erros que possam ocorrer ao tentar ler o arquivo json
+try:
+    # chamando a função leitura_json para ler o arquivo json e amarzenando-a numa variavel
+    df = leitura_json(json)
+# tratamento de erro para caso o arquivo não seja encontrado
+except FileNotFoundError:
+    # print para informar ao usuario que o arquivo não foi encontrado e algumas diretizes para verificar o porque dele não ter sido encontrado
+    print(f'Arquivo: {json}.json não encontrado!\n')
+    print('Verifique se o mesmo existe, se o nome foi digitado corretamente ou se encontra na pasta correta.')
 
 # tela de inicio da classificação dos dados
 print('█▀▀██▀▀██▀▀██▀▀██▀▀██▀▀██▀▀██▀▀██▀▀██▀▀██▀▀██▀▀██▀▀██▀▀██▀▀██▀▀██▀▀██▀▀█')
