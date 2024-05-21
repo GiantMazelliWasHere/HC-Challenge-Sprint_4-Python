@@ -1,5 +1,6 @@
 # Programa de filtragem de dados para o Formulário de Voluntários HC
 
+
 Integrantes:
 - Beatriz Silva Pinheiro Rocha - 553455
 - Carolina Cavalli Machado - 552925
@@ -7,19 +8,22 @@ Integrantes:
 - Eduardo Mazelli - 553236
 - Nathan da Silveira Uflacker - 553264
 
+
 Funcionalidades:
 
+- Receber um arquivo json com os dados em provindos do nosso formulário de cadastro de voluntários que temos no nosso site;
 
-O programa tem uma funcionalidade principal e 2 secundárias.
+- Ler arquivos em json para transformá los em data frame com o uso da biblioteca Pandas;
 
-Funcionalidade principal:
-- Receber os dados em provindos do nosso formulário de admissão de voluntários que temos no nosso site, em forma de um arquivo json, e filtrar os dados baseados nas alternativas que provemos ao usuários;
-- As alternativas são baseadas em perguntas que realizamos no site.
+- Filtrar os dados baseados nas alternativas relativas às perguntas feitas no site e assim o usuário pode filtrar os candidatos para as vagas;
 
-Funcionalidades secundárias:
-- Ler arquivos em json e transformá los em data frame com o uso da biblioteca Pandas;
-- Um conversor de arquivos que permite o usuário a receber os dados no formato que preferir, entre as opções excel(xlsx), csv e jso, dando o nome que o usuário preferir.
+- Converter o data frame criado após a filtragem em excel(xlsx), csv ou json;
+
+- Nomear o arquivo convertido.
+
 
 Requisitos:
+
 - Ter python versão 3.11 ou mais recente instalada na máquina que irá rodar o código;
-- Ter a biblioteca pandas baixada na máquina;
+
+- Ter a biblioteca pandas baixada na máquina.
